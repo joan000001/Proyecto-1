@@ -1,4 +1,4 @@
-# Nombre del proyecto
+# Introducción a diseño digital en HDL aaa
 
 ## 1. Abreviaturas y definiciones
 - **FPGA**: Field Programmable Gate Arrays
@@ -7,6 +7,7 @@
 [0] David Harris y Sarah Harris. *Digital Design and Computer Architecture. RISC-V Edition.* Morgan Kaufmann, 2022. ISBN: 978-0-12-820064-3
 
 ## 3. Desarrollo
+## Joan Franco Sandoval
 
 ### 3.0 Descripción general del sistema
 
