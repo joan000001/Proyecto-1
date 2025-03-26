@@ -1,4 +1,4 @@
-# Nombre del proyecto
+# hamming74
 
 ## 1. Abreviaturas y definiciones
 - **FPGA**: Field Programmable Gate Arrays
@@ -17,15 +17,16 @@
 ### 3.1 Módulo 1
 
 #### 1. Encabezado del módulo
-
+```SystemVerilog
 - module hamming74 (
   input logic [3:0] in,
   output logic [6:0] ou
 );
-
+```
 #### 2. Parámetros
-- in
-- ou
+in
+
+ou
 
 #### 3. Entradas y salidas:
 - in: Se resive una señal de 4 bit, esta señal proviente de un swicth de 4 interuptores donde al estar en corto generqa la entrada 1 al modulo
@@ -44,19 +45,9 @@ El módulo hamming74 codifica un conjunto de 4 bits de datos en un formato de 7 
 
 #### 4.3 Diagrama del Codificador Hamming (7,4)
 
-- El siguiente diagrama muestra la estructura del codificador:
 
-
-Entrada (4 bits):  [ d3  d5  d6  d7 ]
-
- ejemplo Cálculo de paridad:
-  p1 = d3 ⊕ d5 ⊕ d7
-  p2 = d3 ⊕ d6 ⊕ d7
-  p4 = d5 ⊕ d6 ⊕ d7
-
-Salida (7 bits):  [ d7  d6  d5  p4  d3  p2  p1 ]
-
-#### 4. Ctests
+#### 5. Testbench
+Descripción y resultados de las pruebas hechas
 
 
 
@@ -64,10 +55,12 @@ Salida (7 bits):  [ d7  d6  d5  p4  d3  p2  p1 ]
 
 #### 1. Encabezado del módulo
 
-- module hamming_detection (
-  input logic [6:0] dataRaw,
-  output logic [2:0] posError
+```SystemVerilog
+module hamming74 (
+  input logic [3:0] in,
+  output logic [6:0] ou
 );
+```
 
 #### 2. Parámetros
 - dataRaw
@@ -94,17 +87,7 @@ Salida (7 bits):  [ d7  d6  d5  p4  d3  p2  p1 ]
 
 #### 4.3 Diagrama del Codificador Hamming (7,4)
 
-- El siguiente diagrama muestra la estructura del codificador:
 
-
-Entrada (4 bits):  [ d3  d5  d6  d7 ]
-
- ejemplo Cálculo de paridad:
-  p1 = d3 ⊕ d5 ⊕ d7
-  p2 = d3 ⊕ d6 ⊕ d7
-  p4 = d5 ⊕ d6 ⊕ d7
-
-Salida (7 bits):  [ d7  d6  d5  p4  d3  p2  p1 ]
 
 #### 5. Testbench
 Descripción y resultados de las pruebas hechas
@@ -134,14 +117,14 @@ Descripción y resultados de las pruebas hechas
 ### 3.3 Módulo 3
 
 #### 1. Encabezado del módulo
-
+```SystemVerilog
 - module correccion_error(
   input  logic [6:0] dataRaw,
   input  logic [2:0] sindrome,
   output logic [6:0] correccion,
   output logic [3:0] dataCorrecta
 );
-
+```
 #### 2. Parámetros
 - Entradas
 
@@ -181,17 +164,6 @@ Descripción y resultados de las pruebas hechas
 
 #### 4.3 Diagrama del Codificador Hamming (7,4)
 
-- El siguiente diagrama muestra la estructura del codificador:
-
-
-Entrada (4 bits):  [ d3  d5  d6  d7 ]
-
- ejemplo Cálculo de paridad:
-  p1 = d3 ⊕ d5 ⊕ d7
-  p2 = d3 ⊕ d6 ⊕ d7
-  p4 = d5 ⊕ d6 ⊕ d7
-
-Salida (7 bits):  [ d7  d6  d5  p4  d3  p2  p1 ]
 
 #### 5. Testbench
 Descripción y resultados de las pruebas hechas
@@ -202,12 +174,12 @@ Descripción y resultados de las pruebas hechas
 ### 3.4 Módulo 4
 
 #### 1. Encabezado del módulo
-
+```SystemVerilog
 - module display_7bits_leds (
   input  logic [6:0] coregido,
     output logic [6:0] led
 );
-
+```
 #### 2. Parámetros
 
 - coregido
@@ -232,17 +204,6 @@ Descripción y resultados de las pruebas hechas
 
 #### 4.3 Diagrama del Codificador Hamming (7,4)
 
-- El siguiente diagrama muestra la estructura del codificador:
-
-
-Entrada (4 bits):  [ d3  d5  d6  d7 ]
-
- ejemplo Cálculo de paridad:
-  p1 = d3 ⊕ d5 ⊕ d7
-  p2 = d3 ⊕ d6 ⊕ d7
-  p4 = d5 ⊕ d6 ⊕ d7
-
-Salida (7 bits):  [ d7  d6  d5  p4  d3  p2  p1 ]
 
 #### 5. Testbench
 Descripción y resultados de las pruebas hechas
