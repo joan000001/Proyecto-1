@@ -1,4 +1,4 @@
-# hamming74
+# Hamming74
 
 ## 1. Abreviaturas y definiciones
 - **FPGA**: Field Programmable Gate Arrays
@@ -7,6 +7,9 @@
 [0] David Harris y Sarah Harris. *Digital Design and Computer Architecture. RISC-V Edition.* Morgan Kaufmann, 2022. ISBN: 978-0-12-820064-3
 
 ## 3. Desarrollo
+ Joan Franco Sandoval 
+ Diego Navarro
+
 
 
 
